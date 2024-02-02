@@ -8,7 +8,7 @@ So rock, paper and scissors might be a simple game, but it will take some time t
 
 The idea is that the user is playing against the computer.
 
-The player chooses if he/she wants to go with ether rock, paper or scissors.
+The player chooses if he/she wants to go with either rock, paper or scissors.
 The computer also "chooses" a one of these three options.
 
 Rock beats Scissors - Scissors beats Paper - Paper beats Rock
