@@ -20,55 +20,58 @@ function getPlayerChoice() {
 
 let countComputer = 0
 let countPlayer = 0
+let result = ""
 
 function playRound(playerSelection, computerSelection){                         //Function compares playerSelection and computerSelection and decides if it is a draw or if someone wins
     
     if (playerSelection == computerSelection){                                  //If both numbers are equal "Its a draw!" is printed and the count variables are not incremented
+                                          
+        let result = `It's a draw! ${countPlayer}:${countComputer}`
+        return result
 
-        console.log("It's a draw!")
-        console.log(`${countPlayer}:${countComputer}`)
-
-    }else if (playerSelection == 1 && computerSelection == 2) {                 //Every following "else if" compares choices:
+    }else if (playerSelection == 1 && computerSelection == 2) {                         //Every following "else if" compares choices:
                                                                                 
-        countComputer++                                                         //increment the counter of the winner
-        console.log("You lose! Paper beats rock!")                              //prints the to the user who has won 
-        console.log(`${countPlayer}:${countComputer}`)                          //prints the overall count
+        countComputer++                                                                 //increment the counter of the winner                                                                                         
+        let result = `You lose! Paper beats rock! ${countPlayer}:${countComputer}`    //prints the to the user who has won and the overall count
+        return result                                                       
 
     }else if (playerSelection == 1 && computerSelection == 3) {
 
         countPlayer++
-        console.log("You win! Rock beats scissors!")
-        console.log(`${countPlayer}:${countComputer}`)
+        let result = `You win! Rock beats scissors! ${countPlayer}:${countComputer}`
+        return result 
 
     }else if (playerSelection == 2 && computerSelection == 1) {
 
         countPlayer++
-        console.log("You win! Paper beats rock!")
-        console.log(`${countPlayer}:${countComputer}`)
+        let result = `You win! Paper beats rock! ${countPlayer}:${countComputer}`
+        return result 
 
     }else if (playerSelection == 2 && computerSelection == 3) {
 
         countComputer++
-        console.log("You lose! Scissors beats paper!")
-        console.log(`${countPlayer}:${countComputer}`)
+        let result = `You lose! Scissors beats paper! ${countPlayer}:${countComputer}`
+        return result 
 
     }else if (playerSelection == 3 && computerSelection == 1) {
 
         countComputer++
-        console.log("You lose! Rock beats scissors!")
-        console.log(`${countPlayer}:${countComputer}`)
+        let result = `You lose! Rock beats scissors! ${countPlayer}:${countComputer}`
+        return result 
+        
 
     }else if (playerSelection == 3 && computerSelection == 2) {
 
         countPlayer++
-        console.log("You win! Scissors beats paper!")
-        console.log(`${countPlayer}:${countComputer}`)
+        let result = `You win! Scissors beats paper! ${countPlayer}:${countComputer}`
+        return result 
     }
 }
 
 
-for (let i = 0; i < 5; i++){                                                    //Loop calls the function playRound 5 times
-    playRound(getPlayerChoice(), getComputerChoice())
+
+for (let i = 0; i < 5; i++){                                                    //Loop calls the function playRound 5 times and prints the returning string
+    console.log(playRound(getPlayerChoice(), getComputerChoice()));
 }
 
 if (countPlayer > countComputer){                                               //if statement compares the overall counter an decides who has won
