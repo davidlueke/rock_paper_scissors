@@ -18,17 +18,6 @@ function getPlayerChoice() {
     }
 }
 
-// Compare Choices
-// Create function 
-// Same choice == Draw
-// P1 C2 = C wins
-// P1 C3 = P wins
-// P2 C1 = P wins
-// P2 C3 = C wins
-// P3 C1 = C wins
-// P3 C2 = P wins
-// Each win a c or p counter goes up
-
 let countComputer = 0
 let countPlayer = 0
 
