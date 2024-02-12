@@ -63,7 +63,7 @@ let countPlayer = 0
 
 let points = document.createElement("p");
 points.textContent = `${countPlayer} : ${countComputer}`;
-points.setAttribute("style", "color: #F9FAF8; font-size: 40px")
+points.setAttribute("style", "color: #F9FAF8; font-size: 60px")
 let score = document.querySelector("#score");
 score.appendChild(points);
 
