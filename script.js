@@ -2,7 +2,7 @@ function getComputerChoice() {                                                  
     return Math.floor(Math.random() * 3) + 1;                                           //Generates a random number between 1 and 3
 }
 function updateScore() {
-    points.textContent = `${countPlayer}:${countComputer}`;
+    points.textContent = `${countPlayer} : ${countComputer}`;
 }
 
 function playRound(playerSelection, computerSelection){                                 //Function compares playerSelection and computerSelection and decides if it is a draw or if someone wins
@@ -45,6 +45,7 @@ function endGame(){
     }
 }
 
+
 function handleRock(){
         playRound(1, getComputerChoice());
 }
@@ -61,13 +62,16 @@ let countComputer = 0
 let countPlayer = 0
 
 let points = document.createElement("p");
-points.textContent = `${countPlayer}:${countComputer}`;
+points.textContent = `${countPlayer} : ${countComputer}`;
+points.setAttribute("style", "color: #F9FAF8; font-size: 40px")
 let score = document.querySelector("#score");
 score.appendChild(points);
 
 let message = document.querySelector("#message");
 let playerWins = document.createElement("p");
+playerWins.setAttribute("style", "color: #F9FAF8; font-size: 40px");
 let computerWins = document.createElement("p");
+computerWins.setAttribute("style", "color: #F9FAF8; font-size: 40px");
 
 playerWins.textContent ="You win!";
 computerWins.textContent ="You lose!";
@@ -79,3 +83,4 @@ const scissors = document.querySelector(".scissors");
 rock.addEventListener("click", handleRock);
 paper.addEventListener("click", handlePaper);
 scissors.addEventListener("click", handleScissors);
+
