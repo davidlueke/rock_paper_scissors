@@ -70,10 +70,6 @@ function playRound(playerSelection, computerSelection){                         
 
 
 
-for (let i = 0; i < 5; i++){                                                            //Loop calls the function playRound 5 times and prints the returning string
-    console.log(playRound(getPlayerChoice(), getComputerChoice()));
-}
-
 if (countPlayer > countComputer){                                                       //if statement compares the overall counter an decides who has won
     console.log(`With ${countPlayer}:${countComputer} you are the winner!`)             //Based on the comparison the corresponding message is printed
 }else if (countPlayer < countComputer){
